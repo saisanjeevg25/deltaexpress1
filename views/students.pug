@@ -1,0 +1,25 @@
+doctype html
+html
+   head
+      title Hello Praveen
+   body
+      p(style="color:red") Lets understand Pug based templating!
+      h1(style="color:green") Praveen Made it easy
+      table(border="2" cellpadding="10") 
+        thead 
+            th FullName
+                button sort
+            th Email
+                button sort
+            th Mobile
+                button sort
+        if allstudents.length!=0
+            each val in allstudents
+                tr 
+                    td #{val.fullname}
+                    td #{val.email}
+                    td #{val.mobile}
+        else
+            h1 no students
+
+      
